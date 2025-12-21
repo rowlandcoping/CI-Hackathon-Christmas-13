@@ -1,0 +1,90 @@
+body {
+    display:flex;
+    flex-flow:column;
+}
+
+/*styling for test lights*/
+.light-container {
+    display:flex;
+}
+.christmas-light {
+    height: 20px;
+    width: 20px;
+    margin-right:5px;
+}
+
+/*color classes to apply to lights*/
+.light-off {
+    background-color:black !important;
+}
+.color-white {
+    background-color: white;
+}
+.color-red {
+    background-color: red;
+}
+.color-blue {
+    background-color: blue;
+}
+.color-green {
+    background-color: green;
+}
+.color-orange {
+    background-color: orange;
+}
+.color-purple {
+    background-color: purple;
+}
+
+/*setting size of tree image*/
+.tree-container img {
+    width: 200px;
+    height: 300px;
+    background-color:green;
+}
+
+/*basic design for the control panel buttons*/
+.light-control-buttons {
+    border: 4px solid black;
+    padding: 0 20px 20px 20px;
+}
+
+.color-selector button,
+.pattern-selector button {
+    height:20px;
+    border: 2px solid black;
+}
+.pattern-selector button {
+    width: 75px;
+    background-color:white;
+}
+.color-selector button {
+     width: 45px;
+}
+.color-selector button:hover,
+.pattern-selector button:hover {
+    filter: brightness(0.5);
+    cursor:pointer;
+}
+
+#lights-white-button{
+    background-color:white;
+}
+#lights-red-button {
+    background-color:red;
+}
+#lights-blue-button {
+    background-color:blue;
+}
+#lights-green-button {
+    background-color:green;
+}
+#lights-orange-button {
+    background-color:orange;
+}
+#lights-purple-button {
+    background-color:purple;
+}
+#lights-mixed-button {
+    background: linear-gradient(90deg, white, red, blue, green, orange, purple);
+}

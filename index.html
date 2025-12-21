@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Tree Shit</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <!--  This will one day be a lovely Christmas tree-->
+    <div class="tree-container">
+        <h2>This is a tree (sort of)</h2>
+        <img src="tree-image">
+        <!-- These divs represent the lights themselves and work int eh same way-->
+        <h2>Christmas Lights start</h2>
+        <!--NB light container only for testing purposes - in production lights will be positioned within the tree-->
+        <div class="light-container">
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+            <div class="christmas-light light-off"></div>
+        </div>
+        <h2>Christmas Lights end</h2>
+    </div>
+    <!--  This will contain buttons which will trigger the JS functions-->
+    <div class="light-control-buttons">
+        <h2>Light Controller</h2>
+        <!--  buttons to select different colors-->
+        <div class="color-selector">
+            <h3>select a color</h3>
+            <div>
+                <button class="color-button" id="lights-white-button"></button>
+                <button class="color-button" id="lights-red-button"></button>
+                <button class="color-button" id="lights-blue-button"></button>
+                <button class="color-button" id="lights-green-button"></button>
+                <button class="color-button" id="lights-orange-button"></button>
+                <button class="color-button" id="lights-purple-button"></button>
+                <button class="color-button" id="lights-mixed-button"></button>
+            </div>
+        </div>
+        <!--  buttons to select different patterns-->
+        <div class="pattern-selector">
+            <h3>Select button function</h3>
+            <div>
+                <button id="lights-on-button">On</button>
+                <button id="lights-off-button">Off</button>
+                <button id="lights-flash-button">Flash</button>
+                <button id="lights-chase-button">Chase</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
