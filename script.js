@@ -1,3 +1,20 @@
+
+// time variable for flashing
+const FlashInterval = 200;
+
+//colors used in styles (even off color)
+const Colors =
+{
+    lightOff: "light-off",
+    colorWhite: "color-white",
+    colorRed: "color-red",
+    colorBlue: "color-blue",
+    colorGreen: "color-green",
+    colorOrange: "color-orange",
+    colorPurple: "color-purple"
+};
+
+
 /*I've added the event listeners, below, and the basic color change functions
 and listeners.  I'm sure you can make it do cool things!*/
 
@@ -31,6 +48,7 @@ document.querySelectorAll('.color-button').forEach(element => {
 document.getElementById("lights-on-button").addEventListener("click", (e) => {
     document.querySelectorAll('.christmas-light').forEach(element => {
         element.classList.remove("light-off");
+        if (flashIntervalId) clearInterval(flashIntervalId);
     });
 });
 
@@ -38,5 +56,44 @@ document.getElementById("lights-on-button").addEventListener("click", (e) => {
 document.getElementById("lights-off-button").addEventListener("click", (e) => {
     document.querySelectorAll('.christmas-light').forEach(element => {
         element.classList.add("light-off");
+        if (flashIntervalId) clearInterval(flashIntervalId);
     });
 });
+
+// event listener for flashing lights
+document.getElementById("lights-flash-button").addEventListener("click", flashAll);
+
+//global variable to turn off flashing
+let flashIntervalId = null;
+
+//actually flash lights
+function flashAll()
+{
+    const lights = document.querySelectorAll(".christmas-light");
+
+    if (flashIntervalId) clearInterval(flashIntervalId);
+
+    flashIntervalId = setInterval(() =>
+    {
+        lights.forEach(element =>
+        {
+            if (element.classList.contains(Colors.lightOff)) removeClass(element, Colors.lightOff)
+            else addClass(element, Colors.lightOff);
+        });
+    }, FlashInterval);
+}
+
+
+//helper classes
+function removeClass(element, className)
+{
+    if (element?.classList.contains(className))
+    {
+        element?.classList.remove(className);
+    }
+}
+
+function addClass(element, className)
+{
+    element?.classList.add(className);
+}
