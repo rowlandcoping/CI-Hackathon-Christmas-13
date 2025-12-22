@@ -1,52 +1,143 @@
 body {
     display:flex;
     flex-flow:column;
+    background-image: url("public/livingroom4.jpeg");
 }
 
 /*styling for test lights*/
-.light-container {
-    display:flex;
-}
 .christmas-light {
-    height: 20px;
-    width: 20px;
-    margin-right:5px;
+    position: absolute;
+    height: 5px;
+    width: 10px;    
+    border-radius: 10px 0 0 10px;
+    filter: brightness(800%) saturate(150%); 
+    opacity: 0.92;    
 }
 
 /*color classes to apply to lights*/
 .light-off {
-    background-color:black !important;
+    outline: 1px solid rgba(48, 48, 48, 0.2) !important;
+    background-color:rgba(0, 0, 0, 0.6) !important;
+    box-shadow:none !important;
+    background: none !important;
 }
 .color-white {
+    /*
+    background: radial-gradient(ellipse, 
+        white, 
+        rgba(255, 255, 255, 0.8) 60%, 
+        rgba(255, 255, 255, 0.6) 100%);
+    */
+    outline: 1px solid rgba(48, 48, 48, 0.4);
     background-color: white;
+    box-shadow: 
+        0 0 8px rgb(255, 255, 255),
+        0 0 15px rgba(255, 251, 226, 0.5),
+        0 0 25px rgba(241, 240, 171, 0.3);
 }
 .color-red {
-    background-color: red;
+    background: radial-gradient(ellipse, 
+        rgb(253, 20, 20, 0.9),
+
+        rgb(255, 17, 17) 20%, 
+        rgba(255, 15, 15) 40%,
+         
+        rgba(255, 10, 10) 60%,
+         
+        rgba(255, 5, 5) 80%, 
+        rgba(255, 0, 0) 100%);
+    box-shadow: 
+        0 0 6px rgb(255, 0, 0),
+        0 0 12px rgba(255, 164, 164, 0.5),
+        0 0 18px rgba(255, 255, 255, 0.3);
 }
 .color-blue {
-    background-color: blue;
+    background: radial-gradient(ellipse, 
+        rgb(15, 15, 255, 0.9),
+
+        rgb(12, 12, 255) 20%, 
+        rgba(10, 10, 255) 40%,
+         
+        rgba(7, 7, 255) 60%,
+         
+        rgba(5,5,255) 80%, 
+        rgba(0,0,255) 100%);
+    box-shadow: 
+        0 0 6px rgb(0,0,255),
+        0 0 12px rgba(138, 138, 255, 0.5),
+        0 0 18px rgba(255, 255, 255, 0.3);
 }
 .color-green {
-    background-color: green;
+    background: radial-gradient(ellipse, 
+        rgb(20,128,20, 0.9),
+
+        rgb(17,128,17) 20%, 
+        rgba(15,128,15) 40%,
+         
+        rgb(10, 128, 10) 60%,
+         
+        rgb(5, 128, 5) 80%, 
+        rgba(0,128,0) 100%);
+    box-shadow: 
+        0 0 6px rgb(0,128,0),
+        0 0 12px rgba(67, 143, 67, 0.5),
+        0 0 18px rgba(255, 255, 255, 0.3);
 }
 .color-orange {
-    background-color: orange;
+    background: radial-gradient(ellipse, 
+        rgb(255,190,25, 0.9),
+
+        rgb(255,185,20) 20%, 
+        rgba(255,180,15) 40%,
+         
+        rgb(255,175,10) 60%,
+         
+        rgb(255,170,5) 80%, 
+        rgba(255,165,0) 100%);
+    box-shadow: 
+        0 0 6px rgb(255,165,0),
+        0 0 12px rgba(255, 208, 120, 0.5),
+        0 0 18px rgba(255, 255, 255, 0.3);
 }
 .color-purple {
-    background-color: purple;
+    background: radial-gradient(ellipse, 
+        rgb(128,25,128, 0.9),
+
+        rgb(128,20,128) 20%, 
+        rgba(128,15,128) 40%,
+         
+        rgb(128,10,128) 60%,
+         
+        rgb(128,5,128) 80%, 
+        rgb(128,0,128) 100%);
+    box-shadow: 
+        0 0 6px rgb(128,0,128),
+        0 0 12px rgba(255, 152, 255, 0.5),
+        0 0 18px rgba(255, 255, 255, 0.3);
 }
 
 /*setting size of tree image*/
 .tree-container img {
-    width: 200px;
-    height: 300px;
-    background-color:green;
+    height: 600px;
 }
+.tree-container {
+    position:relative;
+    width: fit-content;
+    height: fit-content;
+}
+
 
 /*basic design for the control panel buttons*/
 .light-control-buttons {
+    display:flex;
     border: 4px solid black;
     padding: 0 20px 20px 20px;
+    background-color:white;
+}
+
+.color-selector, .pattern-selector {
+    margin:10px;
+    text-align:center;
 }
 
 .color-selector button,
@@ -86,5 +177,59 @@ body {
     background-color:purple;
 }
 #lights-mixed-button {
-    background: linear-gradient(90deg, white, red, blue, green, orange, purple);
+    background: linear-gradient(90deg, red, blue, green, orange, purple);
 }
+
+/*positioning the lights (NB this is a lot but you know)*/
+
+#light0 {transform: rotate(60deg); top:60px; left:190px;}
+#light1 {transform: rotate(20deg); top:100px; left:180px;}
+#light2 {transform: rotate(110deg); top:120px; left:220px;}
+#light3 {transform: rotate(320deg); top:140px; left:160px;}
+#light4 {transform: rotate(200deg); top:160px; left:195px;}
+#light5 {transform: rotate(10deg); top:180px; left:230px;}
+#light6 {transform: rotate(320deg); top:190px; left:140px;}
+#light7 {transform: rotate(90deg); top:200px; left:165px;}
+#light8 {transform: rotate(216deg); top:210px; left:195px;}
+#light9 {transform: rotate(175deg); top:220px; left:220px;}
+#light10 {top:230px; left:250px;}
+#light11 {transform: rotate(45deg); top:240px; left:110px;}
+#light12 {transform: rotate(132deg); top:250px; left:135px;}
+#light13 {transform: rotate(318deg); top:260px; left:160px;}
+#light14 {transform: rotate(99deg); top:270px; left:195px;}
+#light15 {transform: rotate(232deg); top:280px; left:220px;}
+#light16 {transform: rotate(110deg); top:290px; left:255px;}
+#light17 {transform: rotate(25deg); top:300px; left:280px;}
+#light18 {transform: rotate(3deg); top:310px; left:90px;}
+#light19 {transform: rotate(206deg); top:320px; left:125px;}
+#light20 {transform: rotate(35deg); top:330px; left:150px;}
+#light21 {transform: rotate(117deg); top:340px; left:185px;}
+#light22 {transform: rotate(17deg); top:350px; left:210px;}
+#light23 {transform: rotate(32deg); top:360px; left:245px;}
+#light24 {transform: rotate(216deg); top:370px; left:270px;}
+#light25 {top:380px; left:295px;}
+#light26 {transform: rotate(155deg); top:387px; left:65px;}
+#light27 {transform: rotate(63deg); top:394px; left:90px;}
+#light28 {transform: rotate(166deg); top:401px; left:120px;}
+#light29 {transform: rotate(216deg); top:408px; left:150px;}
+#light30 {transform: rotate(223deg); top:415px; left:180px;}
+#light31 {transform: rotate(309deg); top:422px; left:210px;}
+#light32 {transform: rotate(9deg); top:429px; left:240px;}
+#light33 {transform: rotate(7deg); top:436px; left:265px;}
+#light34 {transform: rotate(177deg); top:443px; left:290px;}
+#light35 {transform: rotate(193deg); top:450px; left:320px;}
+#light36 {transform: rotate(9deg); top:455px; left:50px;}
+#light37 {transform: rotate(195deg); top:460px; left:78px;}
+#light38 {transform: rotate(198deg); top:465px; left:95px;}
+#light39 {transform: rotate(100deg); top:470px; left:113px;}
+#light40 {transform: rotate(299deg); top:475px; left:140px;}
+#light41 {transform: rotate(235deg); top:480px; left:167px;}
+#light42 {transform: rotate(18deg); top:485px; left:196px;}
+#light43 {transform: rotate(45deg); top:490px; left:223px;}
+#light44 {transform: rotate(220deg); top:495px; left:250px;}
+#light45 {transform: rotate(174deg); top:500px; left:276px;}
+#light46 {transform: rotate(129deg); top:505px; left:305px;}
+#light47 {transform: rotate(301deg); top:510px; left:330px;}
+#light48 {transform: rotate(139deg); top:512px; left:50px;}
+#light49 {transform: rotate(358deg); top:520px; left:95px;}
+#light50 {transform: rotate(338deg); top:525px; left:135px;}
