@@ -1,6 +1,10 @@
+//TODO flash turn off chase, add interval to turn off
+
 
 // time variable for flashing
 const FlashInterval = 200;
+
+let ChaseClicked = false;
 
 //colors used in styles (even off color)
 const Colors =
@@ -47,21 +51,26 @@ document.querySelectorAll('.color-button').forEach(element => {
 //lights off listener + action
 document.getElementById("lights-on-button").addEventListener("click", (e) => {
     document.querySelectorAll('.christmas-light').forEach(element => {
-        element.classList.remove("light-off");
         if (flashIntervalId) clearInterval(flashIntervalId);
+        if (ChaseClicked) ChaseClicked = false;
+        element.classList.remove("light-off");
     });
 });
 
 //lights on listener + action
 document.getElementById("lights-off-button").addEventListener("click", (e) => {
     document.querySelectorAll('.christmas-light').forEach(element => {
+        if (flashIntervalId) clearInterval(flashIntervalId);        
+        if (ChaseClicked) ChaseClicked = false;
         element.classList.add("light-off");
-        if (flashIntervalId) clearInterval(flashIntervalId);
     });
 });
 
 // event listener for flashing lights
 document.getElementById("lights-flash-button").addEventListener("click", flashAll);
+
+//event listener for chasing lights
+document.getElementById("lights-chase-button").addEventListener("click", chase);
 
 //global variable to turn off flashing
 let flashIntervalId = null;
@@ -81,6 +90,35 @@ function flashAll()
             else addClass(element, Colors.lightOff);
         });
     }, FlashInterval);
+}
+
+//chase function to flash a single light in a sequence
+function chase()
+{
+    const lights = document.querySelectorAll(".christmas-light");
+    ChaseClicked = true;
+
+    if (flashIntervalId) clearInterval(flashIntervalId);
+
+    flashIntervalId = setInterval(() =>
+    {
+        lights.forEach((element, i) =>
+        {
+                setTimeout(() =>
+                {
+                    if (ChaseClicked)
+                    {
+                        addClass(element, Colors.lightOff);
+
+                        setTimeout(() =>
+                        {
+                            removeClass(element, Colors.lightOff);
+                        }, FlashInterval);
+                    }
+
+                }, i * FlashInterval);
+        });
+    }, FlashInterval * 5)
 }
 
 
