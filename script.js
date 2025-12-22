@@ -39,11 +39,12 @@ const lightsColorChange = (color) => {
 }
 
 
+
+
 //color basic color change listner
 document.querySelectorAll('.color-button').forEach(element => {
     element.addEventListener('click', function () {
         const color = this.id.split("-")[1];
-        console.log(color);
         lightsColorChange(color);
     });
 });
@@ -135,3 +136,46 @@ function addClass(element, className)
 {
     element?.classList.add(className);
 }
+
+
+// I'm putting all the stuff to show the pop-up images here, so it's out of the way
+const bingTime = () => {
+    const bingImage = document.getElementById("bing-image");
+    const bingTune = document.getElementById("bing-tune");
+    bingImage.style.display = "block";
+    bingTune.play()
+    setTimeout(() =>
+        {
+            bingImage.style.display = "none";
+            bingTune.pause();
+            bingTune.currentTime = 0;
+        }, 20000);
+    
+}
+
+
+const puppyTime = () => {
+    const puppyFire = document.getElementById("puppy-image-fire");
+    const puppySofa = document.getElementById("puppy-image-sofa");
+    puppyFire.style.display = "block";
+    puppySofa.style.display = "block";
+    setTimeout(() =>
+        {
+            puppyFire.style.display = "none";
+            puppySofa.style.display = "none";    
+        }, 10000);  
+}
+
+const penguinTime = () => {
+    const penguinsPic = document.getElementById("penguin-image");
+    penguinsPic.style.display = "block";
+    setTimeout(() =>
+        {
+            penguinsPic.style.display = "none"; 
+        }, 10000);  
+}
+
+document.getElementById("bing-button").addEventListener("click", bingTime);
+document.getElementById("puppies-button").addEventListener("click", puppyTime);
+document.getElementById("penguin-button").addEventListener("click", penguinTime);
+

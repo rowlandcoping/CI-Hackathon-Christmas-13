@@ -1,7 +1,43 @@
 body {
     display:flex;
     flex-flow:column;
+    background-color:black;
+}
+
+.scene-container {
+    position: relative;
     background-image: url("public/livingroom4.jpeg");
+    width:1500px;
+}
+
+.pop-up-images {
+    position: absolute;
+    display: none;
+    z-index: 4;
+}
+
+#bing-image {
+    width: 420px;
+    right: 200px;
+    bottom:0;
+}
+
+#puppy-image-fire {
+    width: 250px;
+    left:200px;
+    bottom:-65px;
+}
+
+#puppy-image-sofa {
+    width: 250px;
+    right:200px;
+    top: 360px;
+}
+
+#penguin-image {
+    width: 250px;
+    right:100px;
+    top: 127px;
 }
 
 /*styling for test lights*/
@@ -11,7 +47,8 @@ body {
     width: 10px;    
     border-radius: 10px 0 0 10px;
     filter: brightness(800%) saturate(150%); 
-    opacity: 0.92;    
+    opacity: 0.92;
+    z-index: 3; 
 }
 
 /*color classes to apply to lights*/
@@ -121,9 +158,26 @@ body {
     height: 600px;
 }
 .tree-container {
+    margin-left: 425px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
     position:relative;
     width: fit-content;
     height: fit-content;
+}
+
+.tree-pot img {
+    height: 150px;
+}
+
+.tree-pot {
+    z-index: 1;
+}
+
+.tree-img {
+    z-index: 2;
+    margin-bottom: -29px
 }
 
 
@@ -133,6 +187,28 @@ body {
     border: 4px solid black;
     padding: 0 20px 20px 20px;
     background-color:white;
+}
+
+.big-button-container img {
+    width: 50px;
+}
+
+
+.big-button-container button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top:20px;
+    margin-right: 20px;
+}
+#bing-button {
+    background-color: red;
+}
+#puppies-button {
+    background-color: yellow;
+}
+#penguin-button {
+    background-color: lightseagreen;
 }
 
 .color-selector, .pattern-selector {
