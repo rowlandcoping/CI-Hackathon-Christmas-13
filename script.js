@@ -1,6 +1,3 @@
-//TODO flash turn off chase, add interval to turn off
-
-
 // time variable for flashing
 const FlashInterval = 200;
 
