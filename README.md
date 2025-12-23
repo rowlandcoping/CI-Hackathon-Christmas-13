@@ -68,7 +68,7 @@ The music file is publicly and freely available via the best thing on the intern
 
 ## Contributors
 
-Attila Biacsi:  Original Concept, lead JavaScript developer.
+Attila Biacsi:  Original Concept, lead JavaScript developer.\
 John Hall: Site design and layout, image work.
 
 
