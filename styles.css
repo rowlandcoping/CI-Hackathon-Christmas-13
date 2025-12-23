@@ -42,7 +42,7 @@ button {
 
 #bing-image {
     width: 420px;
-    right: 200px;
+    right: 0;
     bottom:0;
 }
 
@@ -54,8 +54,8 @@ button {
 
 #puppy-image-sofa {
     width: 250px;
-    right:200px;
-    top: 360px;
+    right:240px;
+    top: 355px;
 }
 
 #penguin-image {
