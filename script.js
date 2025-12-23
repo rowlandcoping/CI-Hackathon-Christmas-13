@@ -49,21 +49,26 @@ document.querySelectorAll('.color-button').forEach(element => {
     });
 });
 
-//lights off listener + action
+//lights on listener + action
 document.getElementById("lights-on-button").addEventListener("click", (e) => {
     document.querySelectorAll('.christmas-light').forEach(element => {
+        element.classList.remove("light-off");
         if (flashIntervalId) clearInterval(flashIntervalId);
         if (ChaseClicked) ChaseClicked = false;
-        element.classList.remove("light-off");
     });
 });
 
-//lights on listener + action
+//lights off listener + action
 document.getElementById("lights-off-button").addEventListener("click", (e) => {
     document.querySelectorAll('.christmas-light').forEach(element => {
         if (flashIntervalId) clearInterval(flashIntervalId);        
         if (ChaseClicked) ChaseClicked = false;
         element.classList.add("light-off");
+        //timer to turn off in chase queue lights
+        setTimeout(() =>
+        {
+            element.classList.add("light-off");
+        }, FlashInterval);
     });
 });
 
@@ -78,7 +83,8 @@ let flashIntervalId = null;
 
 //actually flash lights
 function flashAll()
-{
+{    
+    ChaseClicked = false;
     const lights = document.querySelectorAll(".christmas-light");
 
     if (flashIntervalId) clearInterval(flashIntervalId);
@@ -97,6 +103,9 @@ function flashAll()
 function chase()
 {
     const lights = document.querySelectorAll(".christmas-light");
+    lights.forEach(element => {
+        removeClass(element, Colors.lightOff)
+    });
     ChaseClicked = true;
 
     if (flashIntervalId) clearInterval(flashIntervalId);
