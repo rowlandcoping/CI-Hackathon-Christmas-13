@@ -63,7 +63,6 @@ document.getElementById("lights-off-button").addEventListener("click", (e) => {
     document.querySelectorAll('.christmas-light').forEach(element => {
         if (flashIntervalId) clearInterval(flashIntervalId);        
         if (ChaseClicked) ChaseClicked = false;
-        element.classList.add("light-off");
         //timer to turn off in chase queue lights
         setTimeout(() =>
         {
