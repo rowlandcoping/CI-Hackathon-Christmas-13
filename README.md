@@ -1,6 +1,8 @@
 # Bing Crosby Eat Your Heart Out
 
-This project is intended to be a dynamic sensory experience, with an arborial festive theme. In other words a Christmas Tree.  With some interactive lights on it.
+![Bing Crosby Eat Your Heart Out Screengrab](public/bingy-christmas.webp)
+
+This project is a dynamic sensory experience, a feast for the eyes and ears, with an arborial festive theme. The finished article is, in effect, a fully responsive, fully interactive Advanced Christmas Simulator.
 
 ## UX - Strategy
 
@@ -26,7 +28,7 @@ As developers we have limited time due to work committments and a much reduced t
  - Novelty:  The user would prefer it if the concept was not something that's been done a lot of times before.
  - On topic: Since the entire user-base is likely to consist exclusively of hackathon judges (with the possible exception of my girlfriend) , the site needs to meet all of the Hackathon requirements.
 
- ## UX- Scope and Structure
+ ## UX- Everything Else
 
  ### Technology
 
@@ -43,8 +45,30 @@ As developers we have limited time due to work committments and a much reduced t
  - additional background / foreground objects one might expect to find in a christmassy location.
  - Additional themes (ie background/foreground images and color palate changes)
 
-## UX - Skeleton
+### Skeleton and Design
 
-See initial wireframes HERE
+Since it's a single page application with a clear strucutre and one day to produce it we proceeded straight to the build. It consists of a background image with a tree in the foreground and a control panel at the bottom.  The lights were positioned absolutely within the tree's element to avoid scaling issues. Other Christmassy Easter Eggs were included later on.
+
+## Deployment
+
+The website has been deployed on github pages [HERE](https://rowlandcoping.github.io/CI-Hackathon-Christmas-13/)
+
+## Technologies Used
+
+HTML: Layout.\
+CSS: effects and positioning, mainly using flexbox.\
+Javascript: Light and pop-up element controls.\
+GIT and Github: Version control.\
+GIMP: Image Handling.\
+Inkscape, Bing Image Creator: Image Creation.\
+squoosh.app: Image compression and conversion.
+
+All images are either created by the authors or licensed for non-commercial use.
+The music file is publicly and freely available via the best thing on the internet (ie the internet archive).
+
+## Contributors
+
+Attila Biacsi:  Original Concept, lead JavaScript developer.
+John Hall: Site design and layout, image work.
 
 
