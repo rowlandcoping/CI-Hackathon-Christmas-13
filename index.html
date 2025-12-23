@@ -69,13 +69,6 @@
             <div id="light49" class="christmas-light color-white light-off"></div>
             <div id="light50" class="christmas-light color-white light-off"></div>
         </div>
-        <!--PENGUINS-->
-        <img 
-            class="pop-up-images" 
-            id="penguin-image" 
-            src="public/penguins.png" 
-            alt="A cute puppy with its head cocked.  Aaawwwww"
-        >
         <!--PUPPIES-->
         <img 
             class="pop-up-images" 
@@ -89,11 +82,18 @@
             src="public/sleeping-puppy.png" 
             alt="A cute puppy with its head cocked.  Aaawwwww"
         >
+        <!--PENGUINS-->
+        <img 
+            class="pop-up-images" 
+            id="penguin-image" 
+            src="public/penguins.png" 
+            alt="A cute puppy with its head cocked.  Aaawwwww"
+        >
         <!--BING CROSBY-->
         <img 
             class="pop-up-images" 
             id="bing-image" 
-            src="public/bing-full.jpg" 
+            src="public/bing-full.png" 
             alt="Bing Crosby looking dapper in a suit.  White Christmas is audible"
         >
         <audio id="bing-tune" src="https://dn720306.ca.archive.org/0/items/25-white-christmas/25%20White%20Christmas.mp3"></audio>
@@ -118,35 +118,37 @@
             </div>
         </div>
         <!--  buttons to select different patterns-->
-        <div class="pattern-selector">
-            <h3>Tree Lights</h3>
-            <div>
-                <div>                
-                    <button id="lights-on-button">Constant</button>
-                    <button id="lights-flash-button">Flash</button>
-                    <button id="lights-chase-button">Chase</button>
-                </div>
+        <div class="light-buttons-section-container">
+            <div class="pattern-selector">
+                <h3>Tree Lights</h3>
                 <div>
-                    <button id="lights-off-button">Off</button>
+                    <div>                
+                        <button id="lights-on-button">Constant</button>
+                        <button id="lights-flash-button">Flash</button>
+                        <button id="lights-chase-button">Chase</button>
+                    </div>
+                    <div>
+                        <button id="lights-off-button">Off</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--  buttons to select different colors-->
-        <div class="color-selector">
-            <h3>Select Colours</h3>
-            <div>
+            <!--  buttons to select different colors-->
+            <div class="color-selector">
+                <h3>Select Colours</h3>
                 <div>
-                    <button class="color-button" id="lights-white-button"></button>
-                    <button class="color-button" id="lights-red-button"></button>
-                    <button class="color-button" id="lights-blue-button"></button>
-                    <button class="color-button" id="lights-green-button"></button>
+                    <div>
+                        <button class="color-button" id="lights-white-button"></button>
+                        <button class="color-button" id="lights-red-button"></button>
+                        <button class="color-button" id="lights-blue-button"></button>
+                        <button class="color-button" id="lights-green-button"></button>
+                    </div>
+                    <div>
+                        <button class="color-button" id="lights-orange-button"></button>
+                        <button class="color-button" id="lights-purple-button"></button>
+                        <button class="color-button" id="lights-mixed-button"></button>
+                    </div>
                 </div>
-                <div>
-                    <button class="color-button" id="lights-orange-button"></button>
-                    <button class="color-button" id="lights-purple-button"></button>
-                    <button class="color-button" id="lights-mixed-button"></button>
-                </div>
-            </div>
+            </div>            
         </div>
         
     </div>

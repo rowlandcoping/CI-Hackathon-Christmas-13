@@ -27,6 +27,8 @@ button {
 
 
 .scene-container {
+    margin-top:-10px;
+    padding:0;
     position: relative;
     background-image: url("public/livingroom4.jpeg");
     width:1500px;
@@ -188,6 +190,9 @@ button {
     width: fit-content;
     height: fit-content;
 }
+.light-buttons-section-container {
+    display:flex;
+}
 
 .tree-pot img {
     height: 150px;
@@ -229,6 +234,7 @@ button {
 }
 
 .color-selector {
+    margin-left:50px;
     padding-right: 100px;
 }
 
@@ -279,10 +285,9 @@ button {
 }
 .pattern-selector button {
     width: 75px;
-    background-color:white;
 }
 .color-selector button {
-     width: 45px;
+    width: 45px;
 }
 .color-selector button:hover,
 .pattern-selector button:hover,
@@ -381,3 +386,203 @@ button {
 #light48 {transform: rotate(139deg); top:512px; left:50px;}
 #light49 {transform: rotate(358deg); top:520px; left:95px;}
 #light50 {transform: rotate(338deg); top:525px; left:135px;}
+
+@media screen and (max-width: 1500px) {
+   .scene-container{
+        max-width: 1300px;
+   }
+   #bing-image {
+        width: 350px;
+        right: 0;
+        bottom:0;
+    }
+
+    #puppy-image-sofa {
+        width: 250px;
+        right:70px;
+        top: 350px;
+    }
+
+    #penguin-image {
+        width: 220px;
+        right:0;
+        top: 154px;
+    }
+}
+
+
+@media screen and (max-width:1300px)  {
+    .color-selector,
+    .pop-up-container {
+        padding: 0;
+    }
+    .color-selector {
+        margin-left:30px;
+    }
+    .pop-up-container button{
+        margin-right: 10px;
+    }
+    .scene-container {
+        margin-top: -100px;
+        margin-bottom:-75px;
+        transform: scale(0.8);
+    }
+    .big-button-container button {
+        width: 75px;
+        height: 75px;
+        border: 3px solid rgb(104, 104, 104);
+    }
+    .light-control-buttons {
+        width:95%;
+    }
+}
+
+@media screen and (max-width:1040px)  {
+    .scene-container{
+        max-width: 1000px;
+    }
+    #puppy-image-sofa {
+        width: 250px;
+        right:0;
+        top: 490px;
+    }
+
+    #penguin-image {
+        width: 220px;
+        right:0;
+        top: 534px;
+    }
+     .color-selector {
+        margin-left:30px;
+    }
+}
+
+@media screen and (max-width:850px)  {
+    .scene-container{
+        max-width: 850px;
+        background-position: -400px 0;
+    }
+    .tree-container {
+        margin-left: 30px;
+    }
+    #bing-image {
+        width: 300px;
+        right: 0;
+        bottom:0;
+    }
+
+    #puppy-image-fire {
+        width: 220px;
+        left: 120px;
+        bottom:70px;
+    }
+
+    #puppy-image-sofa {
+        width: 220px;
+        right:70px;
+        top: 375px;
+    }
+
+    #penguin-image {
+        width: 250px;
+        right: 270px;
+        top:500px;
+    }
+    .light-control-buttons{
+        flex-direction: column-reverse;
+    }
+    .color-selector {
+        margin-left:20px;
+    }
+
+    .big-button-container button {
+        width: 100px;
+        height: 100px;
+        border: 4px solid rgb(104, 104, 104);
+        margin-right: 20px;
+    }
+    .light-control-buttons {
+        width:90%;
+    }
+}
+
+@media screen and (max-width:686px)  {
+    .scene-container{
+        max-width: 640px;
+    }
+    #puppy-image-sofa {
+        width: 220px;
+        right:50px;
+        top: 520px;
+    }
+    #penguin-image {
+        width: 250px;
+        right: 50px;
+        top:500px;
+    }
+    .pattern-selector button {
+        width: 65px;
+    }
+}
+
+@media screen and (max-width:520px)  {
+    .light-buttons-section-container {
+        flex-direction: column;
+    }
+    .color-selector {
+        margin-left:0;
+        margin-bottom: 10px;
+    }
+    .scene-container{
+        max-width: 500px;
+    }
+    #puppy-image-sofa {
+        width: 220px;
+        right:-35px;
+        top: 520px;
+    }
+    #penguin-image {
+        width: 250px;
+        right: 0;
+        top:500px;
+    }
+    #bing-image {
+        width: 300px;
+        right: -1px;
+        bottom:-1px;
+    }  
+}
+
+
+@media screen and (max-width:450px)  {
+    .tree-container {
+        margin-left:0;
+    }
+
+    #puppy-image-fire {
+        width: 220px;
+        left: 70px;
+        bottom:75px;
+    }
+
+    #puppy-image-sofa {
+        width: 220px;
+        right:-35px;
+        top: 520px;
+    }
+    #penguin-image {
+        width: 250px;
+        right: 0;
+        top:500px;
+    }
+    .big-button-container button {
+        width: 75px;
+        height: 75px;
+        border: 3px solid rgb(104, 104, 104);
+    }
+    .scene-container{
+        max-width: 440px;
+        background-position: -430px 0;
+    } 
+    
+}
