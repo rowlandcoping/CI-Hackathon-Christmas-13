@@ -1,7 +1,11 @@
 // time variable for flashing
 const FlashInterval = 200;
 
+//global variable to turn off chase
 let ChaseClicked = false;
+
+//global variable to turn off flashing
+let flashIntervalId = null;
 
 //colors used in styles (even off color)
 const Colors =
@@ -73,9 +77,6 @@ document.getElementById("lights-flash-button").addEventListener("click", flashAl
 
 //event listener for chasing lights
 document.getElementById("lights-chase-button").addEventListener("click", chase);
-
-//global variable to turn off flashing
-let flashIntervalId = null;
 
 //actually flash lights
 function flashAll()
